@@ -1,0 +1,38 @@
+from flask import Flask, request, jsonify
+import redis
+
+app_redis = Flask(__name__)
+
+# Connect to Redis
+redis_conn = redis.StrictRedis(host="localhost", port=6379, db=0)
+
+@app_redis.route('/store-products', methods=['POST'])
+def store_products_redis():
+    try:
+        data = request.get_json()
+        products = data.get('products', [])
+
+        # Store data in Redis
+        for product in products:
+            redis_conn.hset('products', product['name'], product['availability'])
+
+        return jsonify({'message': 'Products stored successfully in Redis'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app_redis.route('/list-products', methods=['GET'])
+def list_products_redis():
+    try:
+        # Query data from Redis
+        products = redis_conn.hgetall('products')
+        
+        # Convert byte values to string
+        products = {k.decode(): v.decode() for k, v in products.items()}
+
+        return jsonify({'products': products}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    app_redis.run(host='0.0.0.0', port=6379)

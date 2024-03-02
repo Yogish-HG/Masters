@@ -1,0 +1,682 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: "dev"  
+
+Resources:
+  CustomerTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: 'termProjectCustomerTable'
+      AttributeDefinitions: 
+        - 
+          AttributeName: "Customer_email"
+          AttributeType: "S"
+      KeySchema: 
+        - 
+          AttributeName: "Customer_email"
+          KeyType: "HASH"
+
+      ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+  CustomerOrdersTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: 'termProjectCustomerOrders'
+      AttributeDefinitions: 
+        - 
+          AttributeName: "email"
+          AttributeType: "S"
+      KeySchema: 
+        - 
+          AttributeName: "email"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+  ItemTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: 'termProjectItemsTable'
+      AttributeDefinitions: 
+        - 
+          AttributeName: "name"
+          AttributeType: "S"
+      KeySchema: 
+        - 
+          AttributeName: "name"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+
+  Signuplambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: Signup
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: signup.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+  
+  Loginlambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: Login
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: login.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+
+  AddOrderFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: AddOrder
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: add_order.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+
+  GetAllItemsFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: GetAllItems
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: get_all_items.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+
+  GetPrevOrdersFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: GetPrevOrders
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: get_prev_orders.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+
+  SendEmailFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: SendEmail
+      Handler: lambda_function.lambda_handler
+      Role: arn:aws:iam::391524503315:role/LabRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: lambdabucketb
+        S3Key: send_email.zip
+      MemorySize: 256
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+
+
+
+##########
+  termProjectAPI:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties:
+      Name: TermAPI
+    DependsOn:
+      - Signuplambda
+###########
+  SignUpResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: up
+    DependsOn:
+      - termProjectAPI
+
+  SignUpOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref SignUpResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  SignUpmethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref SignUpResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt Signuplambda.Arn
+    DependsOn:
+      - SignUpResource
+
+  SignUpDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - SignUpmethod
+
+  SignUpPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt Signuplambda.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - SignUpDeployment
+
+#################################
+  LoginResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: in
+    DependsOn:
+      - termProjectAPI
+
+  LoginOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref LoginResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  Loginmethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref LoginResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY  # Change to AWS_PROXY for Lambda integration
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt Loginlambda.Arn
+    DependsOn:
+      - LoginResource
+
+  LoginDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - Loginmethod
+
+  LoginPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt Loginlambda.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - LoginDeployment
+
+##############################################
+
+  GetAllItemsResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: getAllItems
+    DependsOn:
+      - termProjectAPI
+
+  GetAllItemsOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref GetAllItemsResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  GetAllItemsmethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref GetAllItemsResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY  # Change to AWS_PROXY for Lambda integration
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt GetAllItemsFunction.Arn
+    DependsOn:
+      - GetAllItemsResource
+
+  GetAllItemsDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - GetAllItemsmethod
+
+  GetAllItemsPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt GetAllItemsFunction.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - GetAllItemsDeployment
+
+#################################################################
+  GetPrevOrdersResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: Prev
+    DependsOn:
+      - termProjectAPI
+
+  GetPrevOrdersOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref GetPrevOrdersResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  GetPrevOrdersmethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref GetPrevOrdersResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY  # Change to AWS_PROXY for Lambda integration
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt GetPrevOrdersFunction.Arn
+    DependsOn:
+      - GetPrevOrdersResource
+
+  GetPrevOrdersDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - GetPrevOrdersmethod
+
+  GetPrevOrdersPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt GetPrevOrdersFunction.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - GetPrevOrdersDeployment
+
+################################################################
+
+  AddOrderResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: order
+    DependsOn:
+      - termProjectAPI
+
+  AddOrderOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref AddOrderResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  AddOrdermethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref AddOrderResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY  # Change to AWS_PROXY for Lambda integration
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt AddOrderFunction.Arn
+    DependsOn:
+      - AddOrderResource
+
+  AddOrderDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - AddOrdermethod
+
+  AddOrderPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt AddOrderFunction.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - AddOrderDeployment
+
+#############################################################
+  SendMailResource:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ParentId: !GetAtt termProjectAPI.RootResourceId
+      PathPart: mail
+    DependsOn:
+      - termProjectAPI
+
+  SendMailOptionsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref SendMailResource
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+              "method.response.header.Access-Control-Allow-Methods": "'GET,POST,PUT,DELETE'"
+              "method.response.header.Access-Control-Allow-Origin": "'*'"
+            ResponseTemplates:
+              "application/json": ""
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          "application/json": '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            "method.response.header.Access-Control-Allow-Headers": true
+            "method.response.header.Access-Control-Allow-Methods": true
+            "method.response.header.Access-Control-Allow-Origin": true
+          ResponseModels:
+            "application/json": "Empty"
+
+  SendMailmethod:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      ResourceId: !Ref SendMailResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      MethodResponses:
+        - StatusCode: 200
+      Integration:
+        Type: AWS_PROXY
+        IntegrationResponses:
+          - StatusCode: 200
+        IntegrationHttpMethod: POST
+        Uri: !Sub
+          - 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFuncArn}/invocations'
+          - LambdaFuncArn: !GetAtt SendEmailFunction.Arn
+    DependsOn:
+      - SendMailResource
+
+  SendMailDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref termProjectAPI
+      StageName: !Ref EnvironmentName
+    DependsOn:
+      - SendMailmethod
+
+  SendMailPermission:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName: !GetAtt SendEmailFunction.Arn
+      Principal: apigateway.amazonaws.com
+    DependsOn:
+      - SendMailDeployment
+
+######################################
+
+  FrontendApplication:
+    Type: "AWS::ElasticBeanstalk::Application"
+    Properties:
+      ApplicationName: "termProjectAPI"
+      Description: "Application"
+ 
+  ApplicationVersion:
+    Type: "AWS::ElasticBeanstalk::ApplicationVersion"
+    Properties:
+      ApplicationName: !Ref FrontendApplication
+      Description: "Application Version"
+      SourceBundle:
+        S3Bucket: "lambdabucketb"
+        S3Key: "main_zip.zip"
+  FrontendEnvironment:
+    Type: "AWS::ElasticBeanstalk::Environment"
+    Properties:
+      ApplicationName: !Ref FrontendApplication
+      Description: "Environment"
+      EnvironmentName: "termProjectAPI"
+      SolutionStackName: "64bit Amazon Linux 2023 v6.0.3 running Node.js 18"
+      VersionLabel: !Ref ApplicationVersion
+      OperationsRole: "arn:aws:iam::391524503315:role/LabRole"
+      Tier:
+        Name: "WebServer"
+        Type: "Standard"
+      # OptionSettings:
+      #   - Namespace: "aws:elasticbeanstalk:environment"
+      #     OptionName: EnvironmentType
+      #     Value: "SingleInstance"
+      #   - Namespace: "aws:elasticbeanstalk:environment"
+      #     OptionName: ServiceRole
+      #     Value: arn:aws:iam::391524503315:role/LabRole
+      #   - Namespace: "aws:autoscaling:launchconfiguration"
+      #     OptionName: "IamInstanceProfile"
+      #     Value: "LabInstanceProfile"
+      #   - Namespace: "aws:elasticbeanstalk:application:environment"
+      #     OptionName: "REACT_APP_API_URL"
+      #     Value: !Sub "https://${termProjectAPI}.execute-api.${AWS::Region}.amazonaws.com"
+    
+      OptionSettings:
+        - Namespace: aws:ec2:instances
+          OptionName: InstanceTypes
+          Value: t3.medium
+        - Namespace: aws:autoscaling:launchconfiguration
+          OptionName: IamInstanceProfile
+          Value: LabInstanceProfile
+        - Namespace: aws:autoscaling:launchconfiguration
+          OptionName: SecurityGroups
+          Value: default
+        - Namespace: aws:elasticbeanstalk:environment
+          OptionName: ServiceRole
+          Value: arn:aws:iam::391524503315:role/LabRole
+        - Namespace: aws:elasticbeanstalk:application:environment
+          OptionName: REACT_APP_API_URL
+          Value:
+            Fn::Sub:
+            - "https://${termProjectAPI}.execute-api.${AWS::Region}.amazonaws.com"
+            - RestApiGateway: !Ref termProjectAPI
+ 
+ 
+Outputs:
+  ApplicationURL:
+    Description: "Application URL"
+    Value: !Join ["", ["http://", !GetAtt FrontendEnvironment.EndpointURL]]

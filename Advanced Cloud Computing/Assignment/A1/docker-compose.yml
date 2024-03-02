@@ -1,0 +1,24 @@
+services:
+  service1:
+    # build: 
+    #   context: ./Container1
+    image: yogishhg/a1-service1
+    container_name: C1
+    ports:
+      - 6000:6000
+    volumes:
+      - ./:/app/data
+    networks:
+      - my-network
+  service2:
+    # build:
+    #   context: ./Container2 
+    image: yogishhg/a1-service2
+    container_name: C2
+    volumes:
+      - ./:/app/data
+    networks:
+      - my-network 
+
+networks:
+  my-network:

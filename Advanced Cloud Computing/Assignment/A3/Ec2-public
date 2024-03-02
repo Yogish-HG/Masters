@@ -1,0 +1,55 @@
+from flask import Flask, request, jsonify
+import mysql.connector
+import redis
+
+app = Flask(__name__)
+
+db_conn = mysql.connector(
+    host="myrds.cb7g7rinouvi.us-east-1.rds.amazonaws.com",
+    user="admin",
+    password="root1234",
+    database="yogish"
+)
+db_cursor = db_conn.cursor()
+
+redis_conn = redis.StrictRedis(host="your-redis-ip", port=6379, db=0)
+
+@app.route('/store-products', methods=['POST'])
+def store_products():
+    try:
+        data = request.get_json()
+        products = data.get('products', [])
+
+        for product in products:
+            db_cursor.execute("INSERT INTO products (name, price, availability) VALUES (%s, %s, %s)",
+                              (product.get('name'), product.get('price'), product.get('availability')))
+
+        db_conn.commit()
+        return jsonify({'message': 'success'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/list-products', methods=['GET'])
+def list_products():
+    try:
+        # Check if data is available in Redis cache
+        cached_data = redis_conn.get('products')
+
+        if cached_data:
+            # If data is in cache, return it
+            products = eval(cached_data.decode())
+            return jsonify({'products': products, 'cache': True}), 200
+        else:
+            # If data is not in cache, query from PostgreSQL
+            db_cursor.execute("SELECT * FROM products")
+            products = db_cursor.fetchall()
+
+            # Store data in Redis
+            redis_conn.set('products', str(products))
+
+            return jsonify({'products': products, 'cache': False}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)

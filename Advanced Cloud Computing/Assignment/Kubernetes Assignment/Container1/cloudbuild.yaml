@@ -1,0 +1,13 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    id: build-image-id
+    args:
+      - "build"
+      - "-t"
+      - "us-central1-docker.pkg.dev/advcloud-402315/app1/app1-image"
+      - "."
+  - name: "gcr.io/cloud-builders/docker"
+    id: push-image-id
+    args: 
+      - "push"
+      - "us-central1-docker.pkg.dev/advcloud-402315/app1/app1-image"

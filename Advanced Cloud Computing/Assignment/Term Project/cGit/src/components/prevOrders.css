@@ -1,0 +1,35 @@
+/* Style the container div */
+div {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Style the cards */
+  .card {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the individual order items */
+  .card div {
+    margin-bottom: 5px;
+  }
+  
+  /* Style the total amount */
+  .total-amount {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the "No orders available" message */
+  .no-orders-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f00; /* Red color for emphasis */
+  }
+  
