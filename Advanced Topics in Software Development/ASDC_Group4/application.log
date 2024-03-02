@@ -1,0 +1,688 @@
+2023-07-26 13:54:00.278 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 21408 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-07-26 13:54:00.280 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 13:54:01.020 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 13:54:01.027 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 13:54:01.027 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-26 13:54:01.027 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-26 13:54:01.094 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-26 13:54:01.094 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 780 ms
+2023-07-26 13:54:01.429 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@202898d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@317890ea, org.springframework.security.web.context.SecurityContextHolderFilter@20801cbb, org.springframework.security.web.header.HeaderWriterFilter@4aeb0e2b, org.springframework.web.filter.CorsFilter@2c719bd4, org.springframework.security.web.authentication.logout.LogoutFilter@3c770db4, com.project.accomatch.JWT.JwtFilter@46383a78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c240cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64763e49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53aa38be, org.springframework.security.web.session.SessionManagementFilter@125d47c4, org.springframework.security.web.access.ExceptionTranslationFilter@3592c1c4, org.springframework.security.web.access.intercept.AuthorizationFilter@2c26ba07]
+2023-07-26 13:54:01.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 13:54:01.529 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 13:54:01.533 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 1.501 seconds (process running for 2.12)
+2023-07-26 14:00:17.261 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:00:17.262 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:00:17.263 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-26 15:18:13.035 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 14652 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-07-26 15:18:13.038 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 15:18:13.894 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 15:18:13.901 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 15:18:13.902 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-26 15:18:13.902 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-26 15:18:13.986 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:18:13.987 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 889 ms
+2023-07-26 15:18:14.360 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@202898d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@317890ea, org.springframework.security.web.context.SecurityContextHolderFilter@20801cbb, org.springframework.security.web.header.HeaderWriterFilter@4aeb0e2b, org.springframework.web.filter.CorsFilter@2c719bd4, org.springframework.security.web.authentication.logout.LogoutFilter@3c770db4, com.project.accomatch.JWT.JwtFilter@46383a78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c240cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64763e49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53aa38be, org.springframework.security.web.session.SessionManagementFilter@125d47c4, org.springframework.security.web.access.ExceptionTranslationFilter@3592c1c4, org.springframework.security.web.access.intercept.AuthorizationFilter@2c26ba07]
+2023-07-26 15:18:14.447 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 15:18:14.476 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 15:18:14.482 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 1.773 seconds (process running for 2.539)
+2023-07-26 15:40:17.248 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 1528 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-07-26 15:40:17.252 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 15:40:18.380 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 15:40:18.390 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 15:40:18.390 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-26 15:40:18.390 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-26 15:40:18.477 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:40:18.477 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1189 ms
+2023-07-26 15:40:18.942 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@cde8c6c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@174721c4, org.springframework.security.web.context.SecurityContextHolderFilter@412c5e8b, org.springframework.security.web.header.HeaderWriterFilter@159424e2, org.springframework.web.filter.CorsFilter@3592c1c4, org.springframework.security.web.authentication.logout.LogoutFilter@51da32e5, com.project.accomatch.JWT.JwtFilter@7c112f5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b0c3951, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@422ab737, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@322e49ee, org.springframework.security.web.session.SessionManagementFilter@5042e3d0, org.springframework.security.web.access.ExceptionTranslationFilter@f171912, org.springframework.security.web.access.intercept.AuthorizationFilter@186d8a71]
+2023-07-26 15:40:19.088 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 15:40:19.110 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 15:40:19.118 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 2.228 seconds (process running for 3.149)
+2023-07-26 15:40:51.007 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:40:51.008 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:40:51.010 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-26 15:40:51.212 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-07-26 15:40:51.212 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-07-26 15:40:52.311 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:41:16.355 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:41:16.736 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:41:20.843 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:41:35.521 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:41:44.918 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:41:44.941 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:41:50.518 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:41:50.543 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:41:51.280 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:41:51.299 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:02.321 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:02.341 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:03.680 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:03.697 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:04.789 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:04.809 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:08.510 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:08.538 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:11.753 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:11.774 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:12.285 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:12.315 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:12.782 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:12.799 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:12.917 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:12.935 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:13.051 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:13.081 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:15.277 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:15.298 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:18.075 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:18.098 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:18.270 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:18.293 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:18.320 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:18.343 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:18.459 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:18.481 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:18.649 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:18.670 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:24.565 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:24.591 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:29.154 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:29.174 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:29.792 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:29.815 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:30.175 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:30.198 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:30.237 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:30.263 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:30.554 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:30.575 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:30.576 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:30.598 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:32.147 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:32.169 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:32.789 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:32.813 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:32.830 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:32.850 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:32.995 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:33.023 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:33.161 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:33.179 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:34.831 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:34.850 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:35.455 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:35.479 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:35.541 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:35.561 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:35.836 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:35.862 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:35.880 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:35.899 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:40.303 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:42:40.324 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:42:45.438 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 2 for user: hg1999yogish@gmail.com
+2023-07-26 15:42:46.077 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 2
+2023-07-26 15:42:46.207 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 2
+2023-07-26 15:42:46.467 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 2
+2023-07-26 15:42:53.304 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Fetching chat messages for room_id: 101
+2023-07-26 15:43:12.111 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:43:15.344 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.project.accomatch.JWT.JwtService.extractAllClaims(JwtService.java:70)
+	at com.project.accomatch.JWT.JwtService.extractClaim(JwtService.java:30)
+	at com.project.accomatch.JWT.JwtService.extractUsername(JwtService.java:26)
+	at com.project.accomatch.JWT.JwtFilter.doFilterInternal(JwtFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-07-26 15:43:24.771 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Checking Mail iD :Mail ID present in DB
+2023-07-26 15:43:26.710 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Mail sent to hg1999yogish@gmail.com 
+2023-07-26 15:43:48.859 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Update password controller active hg1999yogish@gmail.com 
+2023-07-26 15:43:49.094 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Password updated
+2023-07-26 15:44:05.232 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-07-26 15:44:05.232 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-07-26 15:44:05.533 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:44:14.761 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:44:19.531 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:44:26.335 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:44:30.484 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:44:54.599 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:44:58.556 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:45:34.674 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 15:45:41.168 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:45:45.205 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 2 for user: hg1999yogish@gmail.com
+2023-07-26 15:45:45.844 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 2
+2023-07-26 15:45:46.140 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 2
+2023-07-26 15:45:46.242 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 2
+2023-07-26 15:45:49.772 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Fetching chat messages for room_id: 101
+2023-07-26 15:46:44.927 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:46:47.986 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 3 for user: hg1999yogish@gmail.com
+2023-07-26 15:46:48.604 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 3
+2023-07-26 15:46:48.874 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 3
+2023-07-26 15:46:48.986 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 3
+2023-07-26 15:46:54.131 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-26 15:47:40.128 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:40.148 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:47.366 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:47.386 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:51.095 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:51.116 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:52.509 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:52.531 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:54.719 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:54.744 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:55.883 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:55.904 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:56.438 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:56.461 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:56.672 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:56.690 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:56.694 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:56.713 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:47:58.805 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:47:58.833 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:04.534 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:04.556 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:12.286 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:12.312 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:12.768 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:12.788 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:13.283 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:13.302 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:13.447 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:13.462 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:13.531 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:13.549 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:21.414 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:21.436 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:22.920 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:22.945 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:25.242 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:25.261 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:25.979 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:26.000 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 15:48:26.007 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 15:48:26.027 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:02.362 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:02.392 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:03.261 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:03.339 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:03.410 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:03.687 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:03.765 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:03.808 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:09.887 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:09.942 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:15.903 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:15.932 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:16.975 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:16.996 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 16:07:18.951 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-07-26 16:07:19.423 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-07-26 23:17:53.263 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 19.0.2 with PID 19000 (C:\Dal\Sem 2\ASDC\project new\group04\accomatch\target\classes started by bjkan in C:\Dal\Sem 2\ASDC\project new\group04)
+2023-07-26 23:17:53.266 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-26 23:17:56.043 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-26 23:17:56.054 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-26 23:17:56.056 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-26 23:17:56.056 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-26 23:17:56.174 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-26 23:17:56.177 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2822 ms
+2023-07-26 23:17:56.824 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5af64ce0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e7e962d, org.springframework.security.web.context.SecurityContextHolderFilter@41ef1ea2, org.springframework.security.web.header.HeaderWriterFilter@557b6a37, org.springframework.web.filter.CorsFilter@17229821, org.springframework.security.web.authentication.logout.LogoutFilter@76e90da5, com.project.accomatch.JWT.JwtFilter@2b6fcb9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@583fb274, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@104dc1a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e829999, org.springframework.security.web.session.SessionManagementFilter@460b50df, org.springframework.security.web.access.ExceptionTranslationFilter@718f805a, org.springframework.security.web.access.intercept.AuthorizationFilter@1200458e]
+2023-07-26 23:17:57.024 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-26 23:17:57.084 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-26 23:17:57.116 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 4.412 seconds (process running for 5.434)
+2023-07-26 23:18:11.625 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 23:18:11.625 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-26 23:18:11.641 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2023-07-26 23:18:11.941 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-07-26 23:18:11.941 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-07-26 23:18:13.376 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bhargavk2742@gmail.com
+2023-07-26 23:22:40.439 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-07-27T00:37:12Z. Current time: 2023-07-27T02:22:40Z, a difference of 6328413 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.project.accomatch.JWT.JwtService.extractAllClaims(JwtService.java:70)
+	at com.project.accomatch.JWT.JwtService.extractClaim(JwtService.java:30)
+	at com.project.accomatch.JWT.JwtService.extractUsername(JwtService.java:26)
+	at com.project.accomatch.JWT.JwtFilter.doFilterInternal(JwtFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-26 23:22:40.439 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-07-27T00:37:12Z. Current time: 2023-07-27T02:22:40Z, a difference of 6328413 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.project.accomatch.JWT.JwtService.extractAllClaims(JwtService.java:70)
+	at com.project.accomatch.JWT.JwtService.extractClaim(JwtService.java:30)
+	at com.project.accomatch.JWT.JwtService.extractUsername(JwtService.java:26)
+	at com.project.accomatch.JWT.JwtFilter.doFilterInternal(JwtFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-26 23:23:14.966 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-07-26 23:23:14.966 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-07-26 23:23:15.309 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bjkanodiya42@gmail.com
+2023-07-26 23:23:18.891 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:23:43.979 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - get user information controller active
+2023-07-26 23:23:44.063 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting user Details
+2023-07-26 23:23:44.801 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:23:46.163 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bjkanodiya42@gmail.com
+2023-07-26 23:23:53.950 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:24:13.578 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bjkanodiya42@gmail.com
+2023-07-26 23:25:00.583 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bjkanodiya42@gmail.com
+2023-07-26 23:25:05.844 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:27:02.324 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:27:38.877 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:27:41.759 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:27:56.438 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-26 23:28:08.115 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bjkanodiya42@gmail.com
+2023-07-26 23:28:59.804 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-07-26T23:50:24Z. Current time: 2023-07-27T02:28:59Z, a difference of 9515804 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.project.accomatch.JWT.JwtService.extractAllClaims(JwtService.java:70)
+	at com.project.accomatch.JWT.JwtService.extractClaim(JwtService.java:30)
+	at com.project.accomatch.JWT.JwtService.extractUsername(JwtService.java:26)
+	at com.project.accomatch.JWT.JwtFilter.doFilterInternal(JwtFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-26 23:29:05.440 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-07-26T23:50:24Z. Current time: 2023-07-27T02:29:05Z, a difference of 9521440 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.project.accomatch.JWT.JwtService.extractAllClaims(JwtService.java:70)
+	at com.project.accomatch.JWT.JwtService.extractClaim(JwtService.java:30)
+	at com.project.accomatch.JWT.JwtService.extractUsername(JwtService.java:26)
+	at com.project.accomatch.JWT.JwtFilter.doFilterInternal(JwtFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-27 09:24:49.057 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 4832 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-07-27 09:24:49.060 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-27 09:24:50.394 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-27 09:24:50.402 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-27 09:24:50.402 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-27 09:24:50.402 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-27 09:24:50.478 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-27 09:24:50.478 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1356 ms
+2023-07-27 09:24:50.892 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c61eda5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1859ffda, org.springframework.security.web.context.SecurityContextHolderFilter@1fecfaea, org.springframework.security.web.header.HeaderWriterFilter@3946075, org.springframework.web.filter.CorsFilter@59838256, org.springframework.security.web.authentication.logout.LogoutFilter@5809fa26, com.project.accomatch.JWT.JwtFilter@869d87c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@483f286e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59a2388e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@131a7516, org.springframework.security.web.session.SessionManagementFilter@e7b265e, org.springframework.security.web.access.ExceptionTranslationFilter@27f3f512, org.springframework.security.web.access.intercept.AuthorizationFilter@64b0d1fa]
+2023-07-27 09:24:50.984 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-27 09:24:50.999 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27 09:24:51.005 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 2.358 seconds (process running for 3.336)
+2023-07-27 09:26:37.293 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27 09:26:37.294 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-27 09:26:37.297 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-27 09:26:37.519 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-07-27 09:26:37.520 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-07-27 09:26:38.469 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-27 09:26:43.936 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-27 09:27:23.291 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - get user information controller active
+2023-07-27 09:27:23.316 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting user Details
+2023-07-27 09:27:25.277 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-07-27 09:28:19.653 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-27 09:28:23.281 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-07-27 09:28:24.134 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 14:42:08.966 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 27496 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-08-01 14:42:08.968 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-01 14:42:10.305 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-01 14:42:10.313 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-01 14:42:10.313 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-01 14:42:10.314 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-08-01 14:42:10.406 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-01 14:42:10.407 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1368 ms
+2023-08-01 14:42:11.199 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@59a2388e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@186d8a71, org.springframework.security.web.context.SecurityContextHolderFilter@4351ed61, org.springframework.security.web.header.HeaderWriterFilter@6002e944, org.springframework.web.filter.CorsFilter@3dc40ab9, org.springframework.security.web.authentication.logout.LogoutFilter@1e01b133, com.project.accomatch.JWT.JwtFilter@7c112f5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45e617c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@412c5e8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db6d68d, org.springframework.security.web.session.SessionManagementFilter@4e245739, org.springframework.security.web.access.ExceptionTranslationFilter@704067c6, org.springframework.security.web.access.intercept.AuthorizationFilter@4872669f]
+2023-08-01 14:42:11.322 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-01 14:42:11.335 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-01 14:42:11.344 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 2.736 seconds (process running for 3.556)
+2023-08-01 14:42:50.468 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-01 14:42:50.469 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-01 14:42:50.471 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-08-01 14:42:50.672 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-01 14:42:50.681 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-01 14:42:51.996 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 14:48:08.412 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Checking Mail iD :Mail ID present in DB
+2023-08-01 14:48:10.568 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Mail sent to hg1999yogish@gmail.com 
+2023-08-01 14:50:13.829 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-01 14:50:13.830 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-01 14:50:14.347 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 14:50:19.518 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 2 for user: hg1999yogish@gmail.com
+2023-08-01 14:50:20.161 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 2
+2023-08-01 14:50:20.426 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 2
+2023-08-01 14:50:20.547 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 2
+2023-08-01 14:53:23.872 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 2 for user: hg1999yogish@gmail.com
+2023-08-01 14:53:24.529 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 2
+2023-08-01 14:53:24.788 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 2
+2023-08-01 14:53:24.910 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 2
+2023-08-01 15:01:28.242 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 15:06:13.493 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 15:06:25.321 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - filter controller active
+2023-08-01 15:06:25.353 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Returning the filtered posts
+2023-08-01 15:07:11.504 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 2 for user: hg1999yogish@gmail.com
+2023-08-01 15:07:12.152 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 2
+2023-08-01 15:07:12.439 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 2
+2023-08-01 15:07:12.545 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 2
+2023-08-01 15:07:13.635 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 15:07:15.495 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 6 for user: hg1999yogish@gmail.com
+2023-08-01 15:07:16.314 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 6
+2023-08-01 15:07:16.709 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 6
+2023-08-01 15:07:17.094 [http-nio-8080-exec-4] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 6
+2023-08-01 15:07:17.582 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 15:07:20.808 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 7 for user: hg1999yogish@gmail.com
+2023-08-01 15:07:21.475 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 7
+2023-08-01 15:07:21.852 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 7
+2023-08-01 15:07:22.240 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 7
+2023-08-01 15:13:20.867 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: hg1999yogish@gmail.com
+2023-08-01 15:13:27.050 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 6 for user: hg1999yogish@gmail.com
+2023-08-01 15:13:27.666 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 6
+2023-08-01 15:13:27.974 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 6
+2023-08-01 15:13:28.045 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 6
+2023-08-01 15:13:30.720 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Fetching chat messages for room_id: 107
+2023-08-01 15:29:58.676 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-01 15:29:58.684 [http-nio-8080-exec-8] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-01 15:30:17.611 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-01 15:30:17.612 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-01 15:30:18.045 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: dhrumil.gosaliya@gmail.com
+2023-08-01 15:30:21.110 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting the list of posts for Admin.
+2023-08-01 15:34:55.601 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-01 15:34:55.601 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-01 15:34:55.930 [http-nio-8080-exec-3] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: gowri.prashanth@proton.me
+2023-08-01 15:35:04.638 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-08-01 15:35:15.368 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Lease Post logged in controller active
+2023-08-01 15:37:01.763 [http-nio-8080-exec-6] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting details of post with application ID 17 for user: gowri.prashanth@proton.me
+2023-08-01 15:37:02.234 [http-nio-8080-exec-7] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of images for post with application ID: 17
+2023-08-01 15:37:02.431 [http-nio-8080-exec-10] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of food preference for post with application ID: 17
+2023-08-01 15:37:02.624 [http-nio-8080-exec-5] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of gender preference for post with application ID: 17
+2023-08-06 18:56:52.154 [main] INFO  c.p.accomatch.AccomatchApplication - Starting AccomatchApplication using Java 20.0.1 with PID 24260 (C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4\accomatch\target\classes started by hg15y in C:\Users\hg15y\OneDrive\Desktop\MACS\ASDC\ASDC_Group4)
+2023-08-06 18:56:52.156 [main] INFO  c.p.accomatch.AccomatchApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-06 18:56:53.138 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-06 18:56:53.147 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-06 18:56:53.148 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-06 18:56:53.148 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-08-06 18:56:53.221 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-06 18:56:53.221 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1029 ms
+2023-08-06 18:56:53.677 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@523a7801, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@718fd7c1, org.springframework.security.web.context.SecurityContextHolderFilter@11d2dd2d, org.springframework.security.web.header.HeaderWriterFilter@78da899f, org.springframework.web.filter.CorsFilter@4bc6da03, org.springframework.security.web.authentication.logout.LogoutFilter@12d2ddde, com.project.accomatch.JWT.JwtFilter@7e7fe6d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@174721c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@648c5fb3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f59a516, org.springframework.security.web.session.SessionManagementFilter@3dc40ab9, org.springframework.security.web.access.ExceptionTranslationFilter@6be6931f, org.springframework.security.web.access.intercept.AuthorizationFilter@12219f6a]
+2023-08-06 18:56:53.784 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-06 18:56:53.800 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-06 18:56:53.807 [main] INFO  c.p.accomatch.AccomatchApplication - Started AccomatchApplication in 1.931 seconds (process running for 2.694)
+2023-08-06 18:59:03.391 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-06 18:59:03.392 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-06 18:59:03.396 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-08-06 18:59:03.518 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Login controller active
+2023-08-06 18:59:03.518 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - verifying User credentials for logging in!!
+2023-08-06 18:59:04.020 [http-nio-8080-exec-2] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bhargavk2742@gmail.com
+2023-08-06 18:59:07.773 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bhargavk2742@gmail.com
+2023-08-06 19:02:57.567 [http-nio-8080-exec-9] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting list of posts for user: bhargavk2742@gmail.com
+2023-08-06 19:03:13.028 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - get user information controller active
+2023-08-06 19:03:13.047 [http-nio-8080-exec-1] INFO  c.p.accomatch.LoggerPack.LoggerClass - Getting user Details

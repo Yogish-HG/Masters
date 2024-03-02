@@ -1,0 +1,172 @@
+/* Container for the entire details page */
+.details-container {
+    margin: 20px;
+  }
+  
+  /* Title section */
+  .details-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .details-title h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .details-title h4 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #888;
+  }
+  
+  /* Image carousel section */
+  .carousel-container {
+    margin-bottom: 20px;
+  }
+  
+  .carousel .slider-wrapper {
+    position: relative;
+  }
+  
+  .carousel .slider {
+    margin: 0 auto;
+  }
+  
+  .carousel .slide {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel .slide img {
+    max-height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel .thumbs-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .carousel .thumbs {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    top: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  
+  .carousel .thumb {
+    display: inline-block;
+    width: auto;
+    height: 80px;
+    opacity: 0.6;
+    margin-right: 6px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    outline: none;
+    padding: 4px;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+  }
+  
+  .carousel .thumb.selected,
+  .carousel .thumb:hover {
+    opacity: 1;
+  }
+  
+  /* Details section */
+  .details-section {
+    margin-bottom: 20px;
+  }
+  
+  .details-section h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .details-list-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .details-list-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .details-list-container li {
+    margin-bottom: 10px;
+  }
+  
+  .details-label {
+    font-weight: bold;
+  }
+  
+  /* Preferences section */
+  .preferences-section {
+    margin-bottom: 20px;
+  }
+  
+  .preferences-section h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .preferences-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .preference {
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  /* Unique presentation for preferences (example) */
+  .preference-gender {
+    background-color: #ff99cc;
+    color: #fff;
+  }
+  
+  .preference-food {
+    background-color: #66ccff;
+    color: #fff;
+  }
+  
+  .preference-pets {
+    background-color: #99ff99;
+    color: #333;
+  }
+  
+  .preference-smoking {
+    background-color: #ffcc99;
+    color: #333;
+  }
+  
+  .preference-others {
+    background-color: #cccccc;
+    color: #333;
+  }
+  

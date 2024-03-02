@@ -1,0 +1,118 @@
+/* Styles for the login page */
+section {
+    max-width: 400px;
+    margin: 80px auto 0;
+    padding: 30px;
+    background-color: #1f3b56;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  section:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #21dcf5, #ffdd40);
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #21dcf5;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #20b0dcc1;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #20b0dcc1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffdd40;
+  }
+  
+  .errmsg {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .offscreen {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .line {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  /* Additional styles for the logged-in section */
+  section h1 {
+    text-align: center;
+    color: #ffdd40;
+  }
+  
+  section p {
+    text-align: center;
+  }
+  
+  section a {
+    color: #ffdd40;
+    font-weight: bold;
+  }
+  
+  /* Positioning the sign-in popup */
+  section form {
+    margin-top: 30px;
+  }
+  
+  section p {
+    text-align: center;
+    color: white;
+  }
+  
+  section p a {
+    color: white;
+    font-weight: bold;
+  }
+  

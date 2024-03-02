@@ -1,0 +1,52 @@
+<configuration>
+
+    <!-- Define the appenders -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>application.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Define colors for log levels -->
+    <conversionRule conversionWord="highlight" converterClass="org.springframework.boot.logging.logback.ColorConverter">
+        <springProfile name="dev"> <!-- Use "dev" profile to enable colors in development environment -->
+            <option key="TRACE" value="cyan"/>
+            <option key="DEBUG" value="green"/>
+            <option key="INFO" value="blue"/>
+            <option key="WARN" value="yellow"/>
+            <option key="ERROR" value="red"/>
+        </springProfile>
+        <!-- Fallback colors for non-"dev" profiles or if the terminal does not support colors -->
+        <default>
+            <option key="TRACE" value="faint"/>
+            <option key="DEBUG" value="faint"/>
+            <option key="INFO" value="faint"/>
+            <option key="WARN" value="faint"/>
+            <option key="ERROR" value="bold"/>
+        </default>
+    </conversionRule>
+
+    <!-- Define the loggers -->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Define specific loggers for packages or classes -->
+    <!-- Uncomment and customize as needed -->
+    <!--
+    <logger name="com.example.package" level="debug">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    -->
+
+</configuration>

@@ -1,0 +1,124 @@
+.dashboard-container {
+    margin: 20px;
+  }
+  
+  .post {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .post-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .post-details {
+    flex: 1;
+  }
+  
+  .post-details h3 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .post-details p {
+    margin: 5px 0;
+  }
+  
+  .post-details p:first-child {
+    font-weight: bold;
+  }
+  
+  .post-details p span {
+    font-weight: normal;
+  }
+  
+  .custom-modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-modal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .custom-modal .modal-content h3 { 
+    margin-top: 0;
+  }
+  
+  .custom-modal .modal-content button { 
+    margin-top: 10px;
+  }
+  
+  .filter-container {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+  
+  .filter-container.open {
+    max-height: 500px; /* Adjust the max-height value as needed */
+  }
+  
+  .filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-toggle .toggle-icon {
+    margin-left: 5px;
+  }
+  
+  .filter-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+.button-approved {
+  background-color: #b0e57c;
+  color: white;
+  margin-right: 10px; 
+}
+
+.button-rejected {
+  background-color: #e57373;
+  color: white;
+  margin-right: 10px; 
+}

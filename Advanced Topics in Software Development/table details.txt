@@ -1,0 +1,194 @@
+user table
+	user_id
+	email
+	name
+	password
+	age
+	gender
+	mobile
+	address
+	is_admin
+	is_leaseholder
+	createdAt
+	updatedAt
+
+leaseholder_ads table
+	leaseholder_application_id
+	user_id
+	title
+	subtitle
+	address
+	location_city
+	size
+	room_type
+	document
+	rent
+	other_preferences
+	start_date
+	start_age
+	end_age
+	is_verified
+	createdAt
+	updatedAt
+
+houseseeker_ads table
+	houseseeker_application_id
+	user_id
+	location_city
+	other_preferences
+	room_type
+	start_date
+	createdAt
+	updatedAt
+
+leaseholder_food_preferences table
+	leaseholder_food_pref_id
+	application_id
+	food_pref
+
+leaseholder_images table
+	leaseholder_image_id
+	application_id
+	image_link
+
+leaseholder_gender_preferences table
+	leaseholder_gender_pref_id
+	application_id
+	gender_pref
+
+houseseeker_food_preferences table
+	houseseeker_food_pref_id
+	application_id
+	food_pref
+
+houseseeker_gender_preferences table
+	applicanr_gender_pref_id
+	application_id
+	gender_pref
+
+leaseholder_applicant table
+	leaseholder_applicant_id
+	application_id
+	user_id
+	status
+	room_id
+
+houseseeker_applicant table
+	houseseeker_applicant_id
+	application_id
+	user_id
+	status
+	room_id
+
+chat table
+	message_id
+	room_id
+	user_id
+	message
+	time
+
+room table
+	room_id
+	user_1_id
+	user_2_id
+
+rating_table
+	rating_id
+	user_id
+	application_id
+	rating
+	review
+
+leaseholder_current_residents table
+	application_id
+	user_id
+
+
+create database lab3;
+use lab3;
+
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY auto_increment,
+    `name` VARCHAR(200) NOT NULL,
+    mailing_address VARCHAR(200) NOT NULL,
+    permanent_address VARCHAR(200) NOT NULL,
+    primary_email VARCHAR(200) NOT NULL,
+    primary_phone_number VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Accounts (
+    account_number INT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    account_balance DECIMAL(18, 2) NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+CREATE TABLE Transfers (
+    transfer_id INT PRIMARY KEY,
+    account_number INT NOT NULL,
+    date_of_transfer DATE NOT NULL,
+    recipient_name VARCHAR(200) NOT NULL,
+    `status` ENUM('waiting', 'accepted', 'declined'),
+    FOREIGN KEY (account_number) REFERENCES Accounts(account_number)
+);
+
+
+
+
+START TRANSACTION;
+SAVEPOINT beforeDebit;
+UPDATE Accounts
+SET account_balance = account_balance - 5
+WHERE account_number = 1000;
+INSERT INTO Transfers (transfer_id, account_number, date_of_transfer, recipient_name, `status`)
+VALUES (1, 1000, CURDATE(), 'virat', 'waiting');
+update Accounts set account_balance = account_balance+5
+where account_number = 1001;
+SET @randomNumber := FLOOR(RAND() * 2);
+SET @newStatus = IF(@randomNumber = 0, 'accepted', 'declined');
+SET @sql := IF(@newStatus = 'accepted', 'COMMIT', 'ROLLBACK TO beforeDebit');
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+
+
+DELIMITER //
+
+CREATE PROCEDURE ProcessTransfer()
+BEGIN
+    DECLARE newStatus ENUM('waiting', 'accepted', 'declined');
+    
+    START TRANSACTION;
+    SAVEPOINT beforeDebit;
+    
+    UPDATE Accounts
+    SET account_balance = account_balance - 5
+    WHERE account_number = 1000;
+    
+    INSERT INTO Transfers (transfer_id, account_number, date_of_transfer, recipient_name, `status`)
+    VALUES (2, 1000, CURDATE(), 'virat', 'waiting');
+    
+    UPDATE Accounts
+    SET account_balance = account_balance + 5
+    WHERE account_number = 1001;
+    
+	SET @randomNumber := FLOOR(RAND() * 2);
+	SET newStatus = IF(@randomNumber = 0, 'accepted', 'declined');
+--     SET newStatus = 'declined';
+    
+    IF newStatus = 'accepted' THEN
+		update Transfers set `status` = 'accepted' where transfer_id =1;
+        COMMIT;
+    ELSE
+        ROLLBACK TO beforeDebit;
+		INSERT INTO Transfers (transfer_id, account_number, date_of_transfer, recipient_name, `status`)
+		VALUES (2, 1000, CURDATE(), 'virat', 'declined');
+    END IF;
+    
+    SELECT newStatus;
+END//
+
+DELIMITER ;
+
+CALL ProcessTransfer();
+DROP PROCEDURE IF EXISTS ProcessTransfer;
