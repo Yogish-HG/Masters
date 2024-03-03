@@ -1,0 +1,10 @@
+SELECT 
+  JSON_EXTRACT_SCALAR(data, '$.customer_id') AS customer_id, 
+  COUNT(JSON_EXTRACT_SCALAR(data, '$.customer_id')) AS number_of_orders 
+FROM 
+  `disco-arcana-394001.reservations_export.reservations_raw_latest` 
+GROUP BY 
+  customer_id 
+ORDER BY 
+  number_of_orders DESC 
+LIMIT 10 

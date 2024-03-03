@@ -1,0 +1,78 @@
+default:
+  image: google/cloud-sdk:latest
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - gcloud config set project $PROJECT_ID
+  - echo "Base64 credentials - $BASE64_GOOGLE_CLOUD_CREDENTIALS"
+  - echo "$BASE64_GOOGLE_CLOUD_CREDENTIALS" | base64 -di > service-account-key.json
+  - cat service-account-key.json  
+  - gcloud auth activate-service-account --key-file service-account-key.json
+  - gcloud auth configure-docker
+
+build_app1:
+  stage: build
+  script:
+    - cd Customer\ App/client
+    - gcloud builds submit --tag gcr.io/$PROJECT_ID/$SERVICE_ID_APP1
+  only:
+    refs:
+      - main
+    changes:
+      - "Customer App/client/**/*" 
+    
+
+deploy_app1:
+  stage: deploy
+  script:
+    - gcloud run deploy $SERVICE_ID_APP1 --image gcr.io/$PROJECT_ID/$SERVICE_ID_APP1 --region=us-central1 --platform managed --allow-unauthenticated
+  only:
+    refs:
+      - main
+    changes:
+      - "Customer App/client/**/*" 
+
+build_app2:
+  stage: build
+  script:
+    - cd Partner\ App/client
+    - gcloud builds submit --tag gcr.io/$PROJECT_ID/$SERVICE_ID_APP2
+  only:
+    refs:
+      - main
+    changes:
+      - "Partner App/client/**/*" 
+
+deploy_app2:
+  stage: deploy
+  script:
+    - gcloud run deploy $SERVICE_ID_APP2 --image gcr.io/$PROJECT_ID/$SERVICE_ID_APP2 --region=us-central1 --platform managed --allow-unauthenticated
+  only:
+    refs:
+      - main
+    changes:
+      - "Partner App/client/**/*" 
+
+build_app3:
+  stage: build
+  script:
+    - cd Admin\ App/client
+    - gcloud builds submit --tag gcr.io/$PROJECT_ID/$SERVICE_ID_APP3
+  only:
+    refs:
+      - main
+    changes:
+      - "Admin App/client/**/*" 
+
+deploy_app3:
+  stage: deploy
+  script:
+    - gcloud run deploy $SERVICE_ID_APP3 --image gcr.io/$PROJECT_ID/$SERVICE_ID_APP3 --region=us-central1 --platform managed --allow-unauthenticated
+  only:
+    refs:
+      - main
+    changes:
+      - "Admin App/client/**/*"

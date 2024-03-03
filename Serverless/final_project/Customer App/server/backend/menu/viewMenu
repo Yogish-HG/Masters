@@ -1,0 +1,35 @@
+import json
+import boto3
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+def get_firebase_credentials():
+    client = boto3.client('secretsmanager')
+    secret_name = 'babu'  
+    secret = client.get_secret_value(SecretId=secret_name)
+    return json.loads(secret['SecretString'])
+
+def lambda_handler(event, context):
+    if not firebase_admin._apps:
+        firebase_creds = get_firebase_credentials()
+        cred = credentials.Certificate(firebase_creds)
+        firebase_admin.initialize_app(cred)
+
+    db = firestore.client()
+
+    restaurant_id = event.get('restaurant_id')
+    if not restaurant_id:
+        return {'statusCode': 400, 'body': json.dumps({'message': 'restaurant_id is required'})}
+
+    menu_ref = db.collection('restaurants').document(restaurant_id)
+
+    menu_doc = menu_ref.get()
+    if not menu_doc.exists:
+        return {'statusCode': 404, 'body': json.dumps({'message': 'Restaurant not found'})}
+
+    menu_data = menu_doc.to_dict().get('menu', {})
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps({'menu': menu_data})
+    }

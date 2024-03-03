@@ -1,0 +1,12 @@
+.section-container {
+    display:flex;
+    margin: 0;
+    background-image: url("/public/images/Meteor.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    margin: 5rem auto;
+    width: 80%
+}

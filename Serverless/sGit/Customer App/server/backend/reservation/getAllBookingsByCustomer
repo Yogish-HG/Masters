@@ -1,0 +1,33 @@
+import json
+import boto3
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+def get_firebase_credentials():
+    client = boto3.client('secretsmanager')
+    secret_name = 'babu'  
+    secret = client.get_secret_value(SecretId=secret_name)
+    return json.loads(secret['SecretString'])
+
+def lambda_handler(event, context):
+    if not firebase_admin._apps:
+        firebase_creds = get_firebase_credentials()
+        cred = credentials.Certificate(firebase_creds)
+        firebase_admin.initialize_app(cred)
+
+    db = firestore.client()
+
+    customer_id = event.get('customer_id')
+    if not customer_id:
+        return {'statusCode': 400, 'body': json.dumps({'message': 'customer_id is required'})}
+
+    reservations_query = db.collection('reservations').where('customer_id', '==', customer_id).stream()
+
+    reservations = []
+    for reservation in reservations_query:
+        reservations.append(reservation.to_dict())
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps({'reservations': reservations})
+    }

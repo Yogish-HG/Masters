@@ -1,0 +1,22 @@
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fdcb6e;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+  }
+  p{
+    background-color: antiquewhite;
+  }
+  h2{
+    color: black;
+  }

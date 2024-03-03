@@ -1,0 +1,65 @@
+/* Add some standard styling for the reservation list page */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #5b3535;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.reservation-item {
+  margin-bottom: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.reservation-item:hover {
+  transform: scale(1.02);
+}
+
+p {
+  margin: 0;
+}
+
+/* Add some styling to the date and time */
+p span {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Style the confirmation modal if needed */
+/* .confirmation-modal {
+  // Your styles here
+} */

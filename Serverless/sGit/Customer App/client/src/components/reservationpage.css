@@ -1,0 +1,35 @@
+.reservation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-data-message {
+    color: #ff0000;
+  }
+  
+  .property {
+    margin-bottom: 10px;
+  }
+  
+  .menu-content {
+    margin-top: 20px;
+  }
+  
+  .cuisine-section {
+    margin-bottom: 20px;
+  }
+  
+  .menu-item {
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  

@@ -1,0 +1,38 @@
+import json
+import boto3
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+def get_firebase_credentials():
+    client = boto3.client('secretsmanager')
+    secret_name = 'babu'  
+    secret = client.get_secret_value(SecretId=secret_name)
+    return json.loads(secret['SecretString'])
+
+def lambda_handler(event, context):
+    if not firebase_admin._apps:
+        firebase_creds = get_firebase_credentials()
+        cred = credentials.Certificate(firebase_creds)
+        firebase_admin.initialize_app(cred)
+
+    db = firestore.client()
+
+    restaurant_id = event.get('restaurant_id')
+    cuisine = event.get('cuisine')  
+    menu_name = event.get('menu_name')  
+
+    if not all([restaurant_id, cuisine, menu_name]):
+        return {'statusCode': 400, 'body': json.dumps({'message': 'Missing required fields'})}
+
+    restaurant_ref = db.collection('restaurants').document(restaurant_id)
+
+    restaurant_doc = restaurant_ref.get()
+    if not restaurant_doc.exists:
+        return {'statusCode': 404, 'body': json.dumps({'message': 'Restaurant not found'})}
+
+    menu_items = restaurant_doc.to_dict().get('menu', {}).get(cuisine, [])
+    updated_menu_items = [item for item in menu_items if item['menu_name'] != menu_name]
+
+    restaurant_ref.update({f'menu.{cuisine}': updated_menu_items})
+
+    return {'statusCode': 200, 'body': json.dumps({'message': 'Menu item deleted successfully'})}
