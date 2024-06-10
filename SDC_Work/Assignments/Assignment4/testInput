@@ -1,0 +1,12 @@
+test input 
+
+        String s = """
+                   6 5 4
+                   0 0 5 h
+                   1 2 5 h
+                   1 4 5 v
+                   4 3 4 v
+                   bash
+                   array
+                   frail
+                   plush""";
